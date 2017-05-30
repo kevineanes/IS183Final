@@ -27,4 +27,16 @@
     </div>
   </div>
 
+  <!-- users -->
+  <div class="block">
+    <h1 class="center">Active Users</h1>
+    <div class="book-card-container" *ngFor="let user of users">
+      <div class="book-card" [routerLink]="['/user',user.id]">
+        <img class="book-cover" [src]="user.image_url" alt="user">
+        <P>ID: {{user.id}}</P>
+        <P>Email: {{user.email}}</P>
+      </div>
+    </div>
+  </div>
+
 </div>
